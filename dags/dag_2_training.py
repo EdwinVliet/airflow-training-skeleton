@@ -17,7 +17,7 @@ dag = DAG(
     dagrun_timeout=timedelta(minutes=60),
 )
 
-def print_context(execution_date, context**):
+def print_context(execution_date, **context):
     print(execution_date)
 
 PythonOp = PythonOperator(
