@@ -15,8 +15,8 @@ dag = DAG(
     default_args=args,
     schedule_interval=None,
     dagrun_timeout=timedelta(minutes=60),
-    'start_date': datetime(2019, 12, 1),
-    'schedule_interval': '@daily',
+    start_date: datetime(2019, 12, 1),
+    schedule_interval: '@daily',
 )
 
 task_1 = DummyOperator(
