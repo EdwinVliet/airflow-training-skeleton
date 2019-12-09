@@ -7,13 +7,13 @@ from airflow.operators.dummy_operator import DummyOperator
 
 args = {
     'owner': 'Airflow',
-    'start_date': airflow.utils.dates.days_ago(2),
+    'start_date': airflow.utils.dates.days_ago(5),
 }
 
 dag = DAG(
     dag_id='dag_1_training_scheduled_id',
     default_args=args,
-    schedule_interval='@daily',
+    schedule_interval='45 13 * * 1,3,5',
     dagrun_timeout=timedelta(minutes=60),
 )
 
