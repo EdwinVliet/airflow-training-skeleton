@@ -13,10 +13,9 @@ args = {
 dag = DAG(
     dag_id='dag_1_training_scheduled_id',
     default_args=args,
-    schedule_interval=None,
+    schedule_interval='@daily',
     dagrun_timeout=timedelta(minutes=60),
-    start_date: datetime(2019, 12, 1),
-    schedule_interval: '@daily',
+    'start_date': datetime(2019, 12, 1),
 )
 
 task_1 = DummyOperator(
